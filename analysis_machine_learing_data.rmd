@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+author: Michisato
+date: 2020/12/21
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+```{r}
+init_train_df <- read.csv("data/forest_estimate/train.csv")
+init_test_df <- read.csv("data/forest_estimate/test.csv")
+```
+```{r}
+speed.plot <- init_train_df %>%
+  ggplot(aes(x = time, y = speed)) +
+  geom_point(color = "skyblue")
+speed.plot
+```
+```{r}
+filter_time_train_df <- init_train_df %>%
+        dplyr::filter(time <= 50)
+```
+```{r}
+plot.theta.g <- filter_time_train_df %>%
+        ggplot(aes())
+```
+
+
